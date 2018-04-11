@@ -4,7 +4,7 @@ class CreateLocations < ActiveRecord::Migration[5.1]
       t.string :floor
       t.string :roomNumber
       t.string :description
-      t.reference :building
+      t.references :building
 
       t.timestamps
     end
