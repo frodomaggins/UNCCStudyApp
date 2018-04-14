@@ -8,6 +8,7 @@
  
   <% @building.each do |building| %>
     <tr>
+      <p>hello test</p>
       <td><%= building.name %></td>
       <td><%= building.latitude %></td>
       <td><%= building.longitude %></td>
@@ -15,4 +16,3 @@
   <% end %>
 </table>
 
-<%= link_to 'Home', controller: 'welcome', action: 'index' %>
