@@ -1,0 +1,18 @@
+<h1>List of all buildings</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+  </tr>
+ 
+  <% @building.each do |building| %>
+    <tr>
+      <p>hello test</p>
+      <td><%= building.name %></td>
+      <td><%= building.latitude %></td>
+      <td><%= building.longitude %></td>
+      <td><%= link_to 'Locations', building_path(building) %></td>
+  <% end %>
+</table>
+

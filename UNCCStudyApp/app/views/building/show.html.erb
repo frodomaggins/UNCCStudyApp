@@ -1,0 +1,17 @@
+<h1>Locations</h1>
+<% @building.locations.each do |location| %>
+  <p>
+    <strong>Location Floor:</strong>
+    <%= location.floor %>
+  </p>
+  <p>
+    <strong>Location Room Number:</strong>
+    <%= location.roomNumber %>
+  </p>
+  <p>
+    <strong>Location Description:</strong>
+    <%= location.description %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', controller: 'building', action: 'index' %>
