@@ -5,13 +5,14 @@
     <%= location.floor %>
   </p>
   <p>
-    <strong>Location Room Number:</strong>
+    <strong>Location Room Number:</strong>+
     <%= location.roomNumber %>
   </p>
   <p>
     <strong>Location Description:</strong>
     <%= location.description %>
   </p>
+  <%= link_to 'Comments', building_location_path(location) %>
 <% end %>
-
+<br />
 <%= link_to 'Back', controller: 'building', action: 'index' %>
