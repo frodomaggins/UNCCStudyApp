@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   
   resources :building do
     resources :locations do
-      resources :comments
+      resources :comments do
+      end
     end
   end
   
