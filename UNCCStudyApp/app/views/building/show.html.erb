@@ -1,21 +1,19 @@
 <h1>Locations</h1>
 <% @building.locations.each do |l| %>
-  <hr align = "left" width = 20% />
-  <p>
-    <strong>Floor: </strong><%= l.floor %>
-  </p>
-  <p>
-    <strong>Room Number: </strong><%= l.roomNumber %>
-  </p>
-  <p>
-    <strong>Description: </strong><%= l.description %>
-  </p>
-  <hr align = "left" width = 20% />
-    <% l.comments.each do |c| %>
-      <strong>Commenter: </strong> <%= c.commenter %>
-      <strong>Comment: </strong> <%= c.body %>
-      <br />
-    <% end %>
+    <p>
+        <strong>Floor: </strong><%= l.floor %>
+    </p>
+    <p>
+        <strong>Room Number: </strong><%= l.roomNumber %>
+    </p>
+    <p>
+        <strong>Description: </strong><%= l.description %>
+    </p>
+        <% l.comments.each do |c| %>
+            <strong>Commenter: </strong> <%= c.commenter %>
+            <strong>Comment: </strong> <%= c.body %>
+            <br />
+        <% end %>
 <% end %>
 <br />
 <%= link_to 'Back', controller: 'building', action: 'index' %>
