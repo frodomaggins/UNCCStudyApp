@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Study</title>
+    <title>UNCCStudyApp</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <ul class = "navBar">
+			<li><%= link_to 'Home', controller: 'welcome', action: 'index' %></li>
+			<li><%= link_to 'Locations', controller: 'locations', action: "index" %></li>
+
+			<li>Map</li>
+			
+		</ul>
     <%= yield %>
   </body>
 </html>
