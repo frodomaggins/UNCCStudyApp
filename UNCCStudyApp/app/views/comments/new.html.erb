@@ -1,16 +1,4 @@
-<h1>New</h1>
-<%= form_for :comment, url: comments_path do |f| %>
-  <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
-  </p>
- 
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
+<h1>New Comment</h1>
+<%= render 'form' %>
+<%= link_to 'Back', locations_path %> 
 <% end %>
