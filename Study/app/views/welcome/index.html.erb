@@ -1,0 +1,21 @@
+<h1>Welcome</h1>
+<br />
+<p>
+    Location.create(:buildingName=>"Woodward", :latitude=>1.1, :longitude=>1.1, :floor=>"1", :roomNumber=>"100", :description=>"This is a test location")
+</p>
+<p>
+    Location.create(:buildingName=>"Woodward", :latitude=>1.1, :longitude=>1.1, :floor=>"1", :roomNumber=>"101", :description=>"This is a test location")
+</p>
+<p>
+    Location.create(:buildingName=>"Woodward", :latitude=>1.1, :longitude=>1.1, :floor=>"2", :roomNumber=>"200", :description=>"This is a test location")
+</p>
+<p>
+    Location.create(:buildingName=>"Cone", :latitude=>2.2, :longitude=>2.2, :floor=>"1", :roomNumber=>"100", :description=>"This is a test location")
+</p>
+<p>
+    Location.create(:buildingName=>"Cone", :latitude=>2.2, :longitude=>2.2, :floor=>"1", :roomNumber=>"101", :description=>"This is a test location")
+</p>
+<p>
+    Location.create(:buildingName=>"Kennedy", :latitude=>3.3, :longitude=>3.3, :floor=>"1", :roomNumber=>"100", :description=>"This is a test location")
+</p>
+<%= link_to "Locations", controller: "locations" %>

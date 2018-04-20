@@ -1,18 +1,10 @@
-<h1>Comments </h1>
-<% @building.locations.each do |location| %>
-  <p>
-    <strong>Location Floor:</strong>
-    <%= location.floor %>
-  </p>
-  <p>
-    <strong>Location Room Number:</strong>+
-    <%= location.roomNumber %>
-  </p>
-  <p>
-    <strong>Location Description:</strong>
-    <%= location.description %>
-  </p>
-  <%= link_to 'Comments', building_location_path(location) %>
-<% end %>
-<br />
-<%= link_to 'Back', controller: 'building', action: 'index' %>
+<h1>Comments/show</h1>
+<p>
+  <strong>Commenter:</strong>
+  <%= @comment.commenter %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @comment.body %>
+</p>
