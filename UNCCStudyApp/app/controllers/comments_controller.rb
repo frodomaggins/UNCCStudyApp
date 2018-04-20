@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
           @comment = Comment.all
     end
     def new
+         @comment = Comment.new
     end
     def create
         @location = Location.find(params[:article_id])
