@@ -4,10 +4,9 @@ class CommentsController < ApplicationController
     def new
     end
     def create
-        @comment = Comment.new(comment_params)
-        
-        @comment.save
-        redirect_to @comment
+        @location = Location.find(params[:article_id])
+        @comment = @location.comments.create(comment_params)
+        redirect_to building_path(@location)
     end
     def show
         @comment = Comment.find(params[:id])
