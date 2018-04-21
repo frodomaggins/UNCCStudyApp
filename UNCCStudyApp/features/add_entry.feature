@@ -1,8 +1,8 @@
-Feature: Add a new comments
+Feature: Access site functionality through menu
   
   As a user
   So that I can easily contribute to this site
-  I want to add a new comment on a location of my choice
+  I want to add a new comment on a location of my choice and view the locations
   
   Scenario: As a user, I want to be able to navigate from the home page to the comments page
     Given I am on the home page
