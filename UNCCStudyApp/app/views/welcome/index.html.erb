@@ -2,5 +2,24 @@
 <h2>The App that helps you choose a study location</h2>
 
 <div class = "content">
-    Hello, it's me.
+    <p>$rails console, then paste each line one at a time</p>
+    
+    <p>Test Buildings</p>
+    <p>Building.create(:name=>"Woodward", :latitude=>1.1, :longitude: 2.2)</p>
+    <p>Building.create(:name=>"Cone", :latitude=>3.3, longitude: 4.4)</p>
+    <p>Building.create(:name=>"Kennedy", :latitude=>5.5, longitude=>6.6)</p>
+    
+    <p>Test Locations</p>
+    <p>Location.create(:floor=>"1", :roomNumber=>"100", :description=>"Location description", :building_id=>1)</p>
+    <p>Location.create(:floor=>"1", :roomNumber=>"101", :description=>"Location description", :building_id=>1)</p>
+    <p>Location.create(:floor=>"2", :roomNumber=>"200", :description=>"Location description", :building_id=>2)</p>
+    <p>Location.create(:floor=>"1", :roomNumber=>"110", :description=>"Location description", :building_id=>3)</p>
+    <p>Location.create(:floor=>"1", :roomNumber=>"111", :description=>"Location description", :building_id=>3)</p>
+    
+    <p>Test Comments</p>
+    <p>Comment.create(:commenter=>"User1", :body=>"A comment about this location", :location_id=>1></p>
+    <p>Comment.create(:commenter=>"User2", :body=>"A comment about this location", :location_id=>1></p>
+    <p>Comment.create(:commenter=>"User3", :body=>"A comment about this location", :location_id=>2></p>
+    <p>Comment.create(:commenter=>"User4", :body=>"A comment about this location", :location_id=>3></p>
+    <p>Comment.create(:commenter=>"User5", :body=>"A comment about this location", :location_id=>3></p>
 </div>
