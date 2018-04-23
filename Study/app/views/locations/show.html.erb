@@ -7,14 +7,7 @@
 
 <br />
 <h2>Comments</h2>
-<% @location.comments.each do |c| %>
-    <p>
-        <strong>Commenter: </strong> <%= c.commenter %>
-    </p>
-    <p>
-        <strong>Comment: </strong> <%= c.body %>
-    </p>
-<% end %>
+<%= render @location.comments %>
 
 <br />
 <h2> Add a comment: </h2>
