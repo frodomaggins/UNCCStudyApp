@@ -6,7 +6,7 @@
 </p>
 
 <br />
-<h2>Comments</h2>
+<h2>Comments and Ratings</h2>
 <%= render @location.comments %>
 
 <br />
@@ -22,5 +22,16 @@
     </p>
     <p>
         <%= f.submit %>
+    </p>
+<% end %>
+
+<h2> Rate This Location: </h2>
+<%= form_for([@location, @location.ratings.build]) do |r| %>
+    <p>
+        <%= r.label :stars %><br />
+        <%= r.text_field :stars %>
+    </p>
+    <p>
+        <%= r.submit %>
     </p>
 <% end %>
