@@ -1,7 +1,7 @@
 class RatingsController < ApplicationController
   def create
       @location = Location.find(params[:location_id])
-      @rating = @location.ratings.create(rating_params)
+      @rating = @location.ratings.new(rating_params)
       redirect_to location_path(@location)
   end
     

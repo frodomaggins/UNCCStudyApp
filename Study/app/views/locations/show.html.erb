@@ -9,6 +9,12 @@
 <h2>Comments and Ratings</h2>
 <%= render @location.comments %>
 
+<% @location.ratings.each do |r| %>
+    <p>
+        <strong> Rating: </strong> <%= r.stars %>
+    </p>
+<% end %>
+
 <br />
 <h2> Add a comment: </h2>
 <%= form_for([@location, @location.comments.build]) do |f| %>
@@ -21,10 +27,9 @@
         <%= f.text_field :body %>
     </p>
     <p>
-        <%= f.submit %>
+        <%= f.submit "Comment", name: "comment_here" %>
     </p>
 <% end %>
-
 <h2> Rate This Location: </h2>
 <%= form_for([@location, @location.ratings.build]) do |r| %>
     <p>
@@ -32,6 +37,6 @@
         <%= r.text_field :stars %>
     </p>
     <p>
-        <%= r.submit %>
+        <%= r.submit "Rate" %>
     </p>
 <% end %>
