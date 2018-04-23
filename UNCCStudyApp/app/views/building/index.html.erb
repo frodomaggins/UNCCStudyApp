@@ -1,7 +1,0 @@
-<h1>Buildings</h1>
-<% @building.each do |b| %>
-    <p>
-        <strong><%= b.name %></strong><br />
-        <%= link_to "Locations", building_path(b) %>
-    </p>
-<% end %>
