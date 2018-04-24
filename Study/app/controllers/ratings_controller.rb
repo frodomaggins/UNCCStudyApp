@@ -1,7 +1,14 @@
 class RatingsController < ApplicationController
   def create
       @location = Location.find(params[:location_id])
-      @rating = @location.ratings.new(rating_params)
+      @rating = @location.ratings.create(rating_params)
+      redirect_to location_path(@location)
+  end
+  
+  def destroy
+      @location = Location.find(params[:location_id])
+      @rating = @location.ratings.find(params[:id])
+      @rating.destroy
       redirect_to location_path(@location)
   end
     

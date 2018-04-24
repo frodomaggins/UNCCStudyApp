@@ -1,0 +1,53 @@
+<h1>Location</h1>
+<p>
+    <strong>Name: </strong> <%= @location.name %><br />
+    <strong>Floor: </strong> <%= @location.floor %><br />
+    <strong>Room Number: </strong> <%= @location.roomNumber %><br />
+    <strong>Description: </strong> <%= @location.description %>
+</p>
+
+<br />
+<h2>Ratings: </h2>
+<% @location.ratings.each do |r| %>
+    <p>
+        <strong>Stars: </strong> <%= r.stars %>
+    </p>
+<% end %>
+
+<br />
+<h2>Comments: </h2>
+<% @location.comments.each do |c| %>
+    <p>
+        <strong>Commenter: </strong> <%= c.commenter %>
+    </p>
+    <p>
+        <strong>Comment: </strong> <%= c.body %>
+    </p>
+<% end %>
+
+<br />
+<h2> Add a comment: </h2>
+<%= form_for([@location, @location.comments.build]) do |f| %>
+    <p>
+        <%= f.label :commenter %><br />
+        <%= f.text_field :commenter %>
+    </p>
+    <p>
+        <%= f.label :body %><br />
+        <%= f.text_field :body %>
+    </p>
+    <p>
+        <%= f.submit "Comment", name: "comment_here" %>
+    </p>
+<% end %>
+
+<h2> Add a rating: </h2>
+<%= form_for([@location, @location.ratings.build]) do |f| %>
+    <p>
+        <%= f.label :stars %><br />
+        <%= f.text_field :stars %>
+    </p>
+    <p>
+        <%= f.submit "Rate" %>
+    </p>
+<% end %>
