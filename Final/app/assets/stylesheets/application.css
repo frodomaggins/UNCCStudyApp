@@ -42,6 +42,10 @@ li{
 
 }
 a{
+<<<<<<< HEAD
   
+=======
+  /* text-decoration: none; */
+>>>>>>> 1446caf2414abab3d70d13bdd75964db1c069b73
   color:white;
 }
