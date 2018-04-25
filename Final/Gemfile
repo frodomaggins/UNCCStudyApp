@@ -36,19 +36,12 @@ gem 'jbuilder', '~> 2.5'
 group :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-<<<<<<< HEAD
-    gem 'cucumber'
+  gem 'cucumber'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
 #  gem 'rspec-expectations'
   gem 'rspec-rails'
   gem 'capybara'
-=======
-  gem 'cucumber'
-  gem 'cucumber-rails', :require => false
-  gem 'database_cleaner'
-  gem 'rspec-expectations'
->>>>>>> 3e743e3191d8c904f4356deb0285c2ce7d6ea4c0
 end
 
 group :development do
