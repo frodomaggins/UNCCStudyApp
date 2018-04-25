@@ -9,21 +9,67 @@
 <div class = "content">
     <div style='width: 1000px;'>
       <div id="map" style='width: 1000px; height: 600px;'></div>
-    </div>
 </div>
+
 
 <script type="text/javascript">
         handler = Gmaps.build('Google');
         handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
          markers = handler.addMarkers([
         {
-             "lat": 35.307469,
-             "lng": -80.735183,
+             "lat": 35.308480,
+             "lng": -80.733718,
              "picture": {
-             "width":  32,
-             "height": 32
+             "width":  100,
+             "height": 100
         },
-      "infowindow": "hello!"
+      "infowindow": "Student Union"
+      <!-- link_to 'Locations', location_path(@location)  -->
+      
+      }
+      
+      ]);
+      
+      markers = handler.addMarkers([
+        {
+             "lat": 35.305910, 
+             "lng": -80.732116,
+             "picture": {
+             "width":  100,
+             "height": 100
+        },
+      "infowindow": "Atkins Library"
+      <!-- link_to 'Locations', location_path(@location)  -->
+      
+      }
+      
+      ]);
+      
+       markers = handler.addMarkers([
+        {
+             "lat": 35.307129, 
+             "lng": -80.735902,
+             "picture": {
+             "width":  100,
+             "height": 100
+        },
+      "infowindow": "Woodward Hall"
+      <!-- link_to 'Locations', location_path(@location)  -->
+      
+      }
+      
+      ]);
+      
+       markers = handler.addMarkers([
+        {
+             "lat": 35.305444,  
+             "lng": -80.733157,
+             "picture": {
+             "width":  100,
+             "height": 100
+        },
+      "infowindow": "Cone University Center"
+      <!-- link_to 'Locations', location_path(@location)  -->
       
       }
       
@@ -31,6 +77,7 @@
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds(); 
       handler.getMap().setZoom(16);
+     
      });
 
 </script>
@@ -38,5 +85,3 @@
 <script>
     markers = handler.addMarkers(<%=raw @hash.to_json %>);
 </script>
-
-<!-- <%= link_to "Locations", controller: "locations" %> -->
