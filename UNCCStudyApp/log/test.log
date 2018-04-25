@@ -1,5 +1,6 @@
   [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "buildings"[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+<<<<<<< HEAD
   [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "buildings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "latitude" float, "longitude" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments"[0m
   [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "commenter" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "location_id" integer)[0m
@@ -23,26 +24,78 @@
   [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+=======
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "buildings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "latitude" float, "longitude" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "commenter" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "location_id" integer)[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_location_id" ON "comments" ("location_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations"[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "locations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "floor" varchar, "roomNumber" varchar, "description" varchar, "building_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE  INDEX "index_locations_on_building_id" ON "locations" ("building_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180411233148)[0m
+  [1m[35m (11.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180411230026),
+(20180404215211),
+(20180411225842);
+
+[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-04-18 17:13:11.510980"], ["updated_at", "2018-04-18 17:13:11.510980"]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+>>>>>>> 1d9e313d02af9678c97d40856ce119411694c558
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+<<<<<<< HEAD
   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+=======
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+>>>>>>> 1d9e313d02af9678c97d40856ce119411694c558
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+<<<<<<< HEAD
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+=======
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+>>>>>>> 1d9e313d02af9678c97d40856ce119411694c558
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2018-04-18 17:25:58 +0000
 Processing by WelcomeController#index as HTML
   Rendering welcome/index.html.erb within layouts/application
@@ -53,15 +106,32 @@ Completed 200 OK in 327ms (Views: 320.4ms | ActiveRecord: 0.0ms)
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
 Started GET "/" for 127.0.0.1 at 2018-04-18 17:25:58 +0000
+=======
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:08:21 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 301ms (Views: 293.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:08:21 +0000
+>>>>>>> 1d9e313d02af9678c97d40856ce119411694c558
 Processing by WelcomeController#index as HTML
   Rendering welcome/index.html.erb within layouts/application
   Rendered welcome/index.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+<<<<<<< HEAD
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+=======
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+>>>>>>> 1d9e313d02af9678c97d40856ce119411694c558
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2018-04-18 17:26:29 +0000
 Processing by WelcomeController#index as HTML
   Rendering welcome/index.html.erb within layouts/application
@@ -76,10 +146,27 @@ Processing by WelcomeController#index as HTML
   Rendering welcome/index.html.erb within layouts/application
   Rendered welcome/index.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+=======
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:13:52 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 161ms (Views: 154.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:13:52 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+>>>>>>> 1d9e313d02af9678c97d40856ce119411694c558
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+<<<<<<< HEAD
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
 Started GET "/" for 127.0.0.1 at 2018-04-18 17:26:44 +0000
 Processing by WelcomeController#index as HTML
@@ -115,10 +202,68 @@ Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+=======
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:14:57 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 158ms (Views: 150.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:17:20 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 158ms (Views: 151.7ms | ActiveRecord: 0.0ms)
+Started GET "/building" for 127.0.0.1 at 2018-04-20 16:17:20 +0000
+Processing by BuildingController#index as HTML
+  Rendering building/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.2ms)[0m  [1m[34mSELECT "buildings".* FROM "buildings"[0m
+  Rendered building/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:20:43 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 169ms (Views: 162.3ms | ActiveRecord: 0.0ms)
+Started GET "/building" for 127.0.0.1 at 2018-04-20 16:20:44 +0000
+Processing by BuildingController#index as HTML
+  Rendering building/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.2ms)[0m  [1m[34mSELECT "buildings".* FROM "buildings"[0m
+  Rendered building/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:21:48 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 161ms (Views: 154.1ms | ActiveRecord: 0.0ms)
+Started GET "/building" for 127.0.0.1 at 2018-04-20 16:21:48 +0000
+Processing by BuildingController#index as HTML
+  Rendering building/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.2ms)[0m  [1m[34mSELECT "buildings".* FROM "buildings"[0m
+  Rendered building/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+>>>>>>> 1d9e313d02af9678c97d40856ce119411694c558
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2018-04-18 17:28:08 +0000
 Processing by WelcomeController#index as HTML
   Rendering welcome/index.html.erb within layouts/application
@@ -152,10 +297,72 @@ Processing by WelcomeController#index as HTML
   Rendering welcome/index.html.erb within layouts/application
   Rendered welcome/index.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+=======
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:23:40 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 170ms (Views: 162.9ms | ActiveRecord: 0.0ms)
+Started GET "/building" for 127.0.0.1 at 2018-04-20 16:23:40 +0000
+Processing by BuildingController#index as HTML
+  Rendering building/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.2ms)[0m  [1m[34mSELECT "buildings".* FROM "buildings"[0m
+  Rendered building/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:25:50 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 129ms (Views: 122.1ms | ActiveRecord: 0.0ms)
+Started GET "/building" for 127.0.0.1 at 2018-04-20 16:25:50 +0000
+Processing by BuildingController#index as HTML
+  Rendering building/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.2ms)[0m  [1m[34mSELECT "buildings".* FROM "buildings"[0m
+  Rendered building/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 0.4ms)
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:26:36 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 175ms (Views: 168.0ms | ActiveRecord: 0.0ms)
+Started GET "/building" for 127.0.0.1 at 2018-04-20 16:26:36 +0000
+Processing by BuildingController#index as HTML
+  Rendering building/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.2ms)[0m  [1m[34mSELECT "buildings".* FROM "buildings"[0m
+  Rendered building/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:28:22 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 160ms (Views: 153.4ms | ActiveRecord: 0.0ms)
+Started GET "/building" for 127.0.0.1 at 2018-04-20 16:28:22 +0000
+Processing by BuildingController#index as HTML
+  Rendering building/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.2ms)[0m  [1m[34mSELECT "buildings".* FROM "buildings"[0m
+  Rendered building/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 0.4ms)
+>>>>>>> 1d9e313d02af9678c97d40856ce119411694c558
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+<<<<<<< HEAD
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
 Started GET "/" for 127.0.0.1 at 2018-04-18 17:31:31 +0000
 Processing by WelcomeController#index as HTML
@@ -167,8 +374,31 @@ Completed 200 OK in 127ms (Views: 119.9ms | ActiveRecord: 0.0ms)
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
 Started GET "/" for 127.0.0.1 at 2018-04-18 17:31:32 +0000
+=======
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:28:51 +0000
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 171ms (Views: 163.8ms | ActiveRecord: 0.0ms)
+Started GET "/building" for 127.0.0.1 at 2018-04-20 16:28:51 +0000
+Processing by BuildingController#index as HTML
+  Rendering building/index.html.erb within layouts/application
+  [1m[36mBuilding Load (0.2ms)[0m  [1m[34mSELECT "buildings".* FROM "buildings"[0m
+  Rendered building/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-04-20 16:28:51 +0000
+>>>>>>> 1d9e313d02af9678c97d40856ce119411694c558
 Processing by WelcomeController#index as HTML
   Rendering welcome/index.html.erb within layouts/application
   Rendered welcome/index.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+<<<<<<< HEAD
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+=======
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+>>>>>>> 1d9e313d02af9678c97d40856ce119411694c558

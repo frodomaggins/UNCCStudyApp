@@ -14,7 +14,7 @@ Feature: Add a new comments
     Given I am on the home page
     When I click on the "Locations" link
     Then I should be on the "Locations" page
-    Then I click on the "Show" link
+    When I click on the "Show" link
     Then I should be on the "Comments" page
     And I should see the "Text" field
     And I should see the "Body" field
