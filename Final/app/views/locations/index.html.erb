@@ -1,52 +1,85 @@
-<h1>Locations</h1>
-
-<% if @bool == 1 %>
-    <h2>Searches: </h2>
-        <% @location.each do |l| %>
-            <p>
-                <strong>Building: </strong> <%= l.name %>
-            </p>
-            <p>
-                <strong>Floor: </strong> <%= l.floor %>
-            </p>
-            <p>
-                <strong>Room: </strong> <%= l.roomNumber %>
-            </p>
-            <p>
-                <strong>Description: </strong> <%= l.description %>
-            </p>
-        <% end %>
-<% else %>
-    <h2>Woodward</h2>
-    <br />
-        <% @l1.each do |location| %>
-            <strong>Floor: </strong> <%= location.floor %>
-            <strong>Room Number: </strong> <%= location.roomNumber %>
-            <strong>Description: </strong> <%= location.description %>
-            <%= link_to "Show", location_path(location) %>
-            <br />
-        <% end %>
-        <br />
+<div class = "content">
+    <h1>Locations</h1>
+    <% if @bool == 1 %>
+        <h2>Searches: </h2>
+            <% @location.each do |l| %>
+                <p>
+                    <strong>Building: </strong> <%= l.name %>
+                </p>
+                <p>
+                    <strong>Floor: </strong> <%= l.floor %>
+                </p>
+                <p>
+                    <strong>Room: </strong> <%= l.roomNumber %>
+                </p>
+                <p>
+                    <strong>Description: </strong> <%= l.description %>
+                </p>
+            <% end %>
+    <% else %>
+         <h2>Woodward Building</h2>
+        <table><!-- start of the table -->
+           <tr><!-- this table row is for the headings of the table -->
+               <th> Floor </th>
+               <th> Room Number </th>
+               <th> Description </th>
+               <th> Show on Map </th>
+               
+           </tr>
+           <!-- second row for a building -->
+           <% @l1.each do |location| %><!-- This created itteration for locations-->
+                <tr>
+                    <td><%= location.floor %></td>
+                    <td><%= location.roomNumber %></td>
+                    <td><%= location.description %></td>
+                    <td><a><%= link_to "Show", location_path(location) %></a></td>
+                    
+                <% end %>
+            </tr>
+        </table>
         
-        <h2>Cone</h2>
-        <br />
-        <% @l2.each do |location| %>
-            <strong>Floor: </strong> <%= location.floor %>
-            <strong>Room Number: </strong> <%= location.roomNumber %>
-            <strong>Description: </strong> <%= location.description %>
-            <%= link_to "Show", location_path(location) %>
-            <br />
-        <% end %>
-        <br />
+        <!-- Second table for the cone building! -->
+        <h2>Cone Building</h2>
+        <table><!-- start of the table -->
+           <tr><!-- this table row is for the headings of the table -->
+               <th> Floor </th>
+               <th> Room Number </th>
+               <th> Description </th>
+               <th> Show on Map </th>
+               
+           </tr>
+           <!-- second row for a building -->
+           <% @l2.each do |location| %><!-- This created itteration for locations-->
+                <tr>
+                    <td><%= location.floor %></td>
+                    <td><%= location.roomNumber %></td>
+                    <td><%= location.description %></td>
+                    <td><a><%= link_to "Show", location_path(location) %></a></td>
+                    
+                <% end %>
+            </tr>
+        </table>
         
-        <h2>Kennedy</h2>
-        <br />
-        <% @l3.each do |location| %>
-            <strong>Floor: </strong> <%= location.floor %>
-            <strong>Room Number: </strong> <%= location.roomNumber %>
-            <strong>Description: </strong> <%= location.description %>
-            <%= link_to "Show", location_path(location) %>
-            <br />
-        <% end %>
-        <br />
-<% end %>
+        <!-- third table for the Kennedy building! -->
+        <h2>Kennedy Building</h2>
+        <table><!-- start of the table -->
+           <tr><!-- this table row is for the headings of the table -->
+               <th> Floor </th>
+               <th> Room Number </th>
+               <th> Description </th>
+               <th> Show on Map </th>
+               
+           </tr>
+           <!-- second row for a building -->
+           <% @l3.each do |location| %><!-- This created itteration for locations-->
+                <tr>
+                    <td><%= location.floor %></td>
+                    <td><%= location.roomNumber %></td>
+                    <td><%= location.description %></td>
+                    <td><a><%= link_to "Show", location_path(location) %></a></td>
+                    
+                <% end %>
+            </tr>
+        </table>
+    <% end %>
+</div>

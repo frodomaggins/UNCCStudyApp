@@ -28,6 +28,7 @@
   overflow: hidden;
   background-color: #333;
   color:white;
+  
   }
 li{
   float:left;
@@ -37,8 +38,10 @@ li{
   color: white;
   text-align: center;
   padding: 14px 16px;
+  text-decoration: none;
+
 }
 a{
-  text-decoration: none;
+  
   color:white;
 }
