@@ -13,12 +13,17 @@ feature "Commenter adds a comment" do
     end
     
     scenario "User adds a comment" do
-        visit('/locations/1')
+        visit root_path
+        expect(page).to have_content("Welcome")
+        click_link "Locations"
+        expect(page).to have_content("Locations")
+        visit location_url(1)
+     #   gets('/locations/1').should route_to("Location", :id => "1")
         expect(page).to have_content("Woodward")
         click_link "Show"
         expect(page).to have_content("Comments")
         fill_in "Commenter", with: "John Doe"
-       fill_in "Body", with: "Testing comment 2"
+        fill_in "Body", with: "Testing comment 2"
         click_button "Comment"
         expect(page).to have_content("John Doe")
         expect(page).to have_content("Testing comment 2")
