@@ -81,5 +81,28 @@
                 <% end %>
             </tr>
         </table>
+        
+        
+        <!-- fourth table for the Student Union! -->
+        <h2>Student Union</h2>
+        <table><!-- start of the table -->
+           <tr><!-- this table row is for the headings of the table -->
+               <th> Floor </th>
+               <th> Room Number </th>
+               <th> Description </th>
+               <th> Show on Map </th>
+               
+           </tr>
+           <!-- second row for a building -->
+           <% @l3.each do |location| %><!-- This created itteration for locations-->
+                <tr>
+                    <td><%= location.floor %></td>
+                    <td><%= location.roomNumber %></td>
+                    <td><%= location.description %></td>
+                    <td><a><%= link_to "Show", location_path(location) %></a></td>
+                    
+                <% end %>
+            </tr>
+        </table>
     <% end %>
 </div>

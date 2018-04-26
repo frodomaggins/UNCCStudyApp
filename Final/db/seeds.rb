@@ -12,3 +12,4 @@
     Location.create(:name=>"Cone", :latitude=>2.2, :longitude=>2.2, :floor=>"1", :roomNumber=>"100", :description=>"This is a test location")
     Location.create(:name=>"Cone", :latitude=>2.2, :longitude=>2.2, :floor=>"1", :roomNumber=>"101", :description=>"This is a test location")
     Location.create(:name=>"Kennedy", :latitude=>3.3, :longitude=>3.3, :floor=>"1", :roomNumber=>"100", :description=>"This is a test location")
+    Location.create(:name=>"Student Union", :latitude=>3.3, :longitude=>3.3, :floor=>"1", :roomNumber=>"100", :description=>"This is a test location")
