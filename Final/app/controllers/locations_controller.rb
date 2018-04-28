@@ -11,6 +11,7 @@ class LocationsController < ApplicationController
         @l1 = Location.where("name = 'Woodward'")
         @l2 = Location.where("name = 'Cone'")
         @l3 = Location.where("name = 'Kennedy'")
+        @l4 = Location.where("name = 'Student Union'")
     end
     def show
         @location = Location.find(params[:id])
