@@ -11,6 +11,9 @@ class LocationsController < ApplicationController
         @l1 = Location.where("name = 'Woodward'")
         @l2 = Location.where("name = 'Cone'")
         @l3 = Location.where("name = 'Kennedy'")
+        @l4 = Location.where("name = 'Student Union'")
+        @l5 = Location.where("name = 'Prospector'")
+        @l6 = Location.where("name = 'Atkins Library'")
     end
     def show
         @location = Location.find(params[:id])
@@ -18,9 +21,7 @@ class LocationsController < ApplicationController
     
     @locations = Location.all
     @hash = Gmaps4rails.build_markers(@locations) do |location, marker|
-    marker.lat location.latitude
-    marker.lng location.longitude
-end
-
-
+        marker.lat location.latitude
+        marker.lng location.longitude
+    end
 end
