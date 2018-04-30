@@ -52,3 +52,17 @@ a{
   width: 1000px;
   margin: 100px auto;
 }
+.contentShowLocation{
+   background-color: rgba(0,0,0,0.7);
+  padding:50px;
+  height: 800px;
+  width: 1000px;
+  margin: 100px auto;
+  
+}
+p{
+  color: white;
+}
+h1{
+  text-align: center;
+}
