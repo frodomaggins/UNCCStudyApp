@@ -5,7 +5,7 @@
     
     background-color: rgba(0,0,0,0.7);
     padding:50px;
-    height: 600px;
+    height: auto;
     width: 1200px;
     margin: 100px auto;
     color: white;
@@ -14,7 +14,20 @@
 .heading{
     text-align: center;
 }
+.contentEmail{
+     
+    background-color: rgba(0,0,0,0.7);
+    padding:50px;
+    height: auto;
+    width: 1200px;
+    margin: 100px auto;
+    color: orange;
+}
+
 
 .about{
-   
+    float: right;
+    font-size: 30px;
+    margin-right: 80px;
+    color: orange;
 }
