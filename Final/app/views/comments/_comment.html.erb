@@ -5,6 +5,7 @@
     <strong>Comment: </strong> <%= comment.body %>
 </p>
 <p>
-    <%= link_to 'Delete Comment', [comment.location, comment], method: :delete, data: { confirm: "Confirm Delete?"} %>
+    <%-#<%= link_to 'Delete Comment', [comment.location, comment], method: :delete, data: { confirm: "Confirm Delete?"} -%>
     <%= link_to 'Report', [comment.location, comment], method: :delete, data: { confirm: "Send report email?"} %>
+    
 </p>
