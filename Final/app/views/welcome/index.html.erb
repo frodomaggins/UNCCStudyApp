@@ -23,14 +23,12 @@
              "width":  100,
              "height": 100
         },
-      "infowindow": " Student Union <a href='https://5884d375c0eb430dbbd42690713de7e5.vfs.cloud9.us-east-2.amazonaws.com/locations/1'> Student Union </a>"
+      "infowindow": " Student Union <a href='https://5884d375c0eb430dbbd42690713de7e5.vfs.cloud9.us-east-2.amazonaws.com/locations/13'> Union </a>"
 
-      
       }
       
       ]);
-      
-       markers = handler.addMarkers([
+      markers = handler.addMarkers([
         {
              "lat": 35.307129, 
              "lng": -80.735902,
@@ -38,21 +36,7 @@
              "width":  100,
              "height": 100
         },
-      "infowindow": "Woodward Hall"
-
-      }
-      
-      ]);
-      
-       markers = handler.addMarkers([
-        {
-             "lat": 35.305444,  
-             "lng": -80.733157,
-             "picture": {
-             "width":  100,
-             "height": 100
-        },
-      "infowindow": "Cone University Center"
+      "infowindow": "Woodward Hall <a href='https://5884d375c0eb430dbbd42690713de7e5.vfs.cloud9.us-east-2.amazonaws.com/locations/1'> WW Hall </a>"
 
       }
       
@@ -66,7 +50,7 @@
              "width":  100,
              "height": 100
         },
-      "infowindow": "J. Murray Atkins Library"
+      "infowindow": "J. Murray Atkins Library <a href='https://5884d375c0eb430dbbd42690713de7e5.vfs.cloud9.us-east-2.amazonaws.com/locations/14'> Atkins </a>"
 
       }
       
@@ -80,11 +64,41 @@
              "width":  100,
              "height": 100
         },
-      "infowindow": "Prospector"
+      "infowindow": "Prospector <a href='https://5884d375c0eb430dbbd42690713de7e5.vfs.cloud9.us-east-2.amazonaws.com/locations/18'> Prosp </a>"
 
       }
       
       ]);
+      
+      markers = handler.addMarkers([
+        {
+             "lat": 35.306185,  
+             "lng": -80.730876,
+             "picture": {
+             "width":  100,
+             "height": 100
+        },
+      "infowindow": "Kennedy <a href='https://5884d375c0eb430dbbd42690713de7e5.vfs.cloud9.us-east-2.amazonaws.com/locations/6'> Kenn </a>"
+
+      }
+      
+      ]);
+       
+      markers = handler.addMarkers([
+        {
+             "lat": 35.305575,  
+             "lng": -80.733091,
+             "picture": {
+             "width":  100,
+             "height": 100
+        },
+      "infowindow": "Cone Center <a href='https://5884d375c0eb430dbbd42690713de7e5.vfs.cloud9.us-east-2.amazonaws.com/locations/4'> Cone </a>"
+
+      }
+      
+      ]);
+      
+      
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds(); 
       handler.map.centerOn([35.306977, -80.733605]);
